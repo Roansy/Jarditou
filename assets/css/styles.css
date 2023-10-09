@@ -1,0 +1,16 @@
+body{
+    background-color: pink;
+}
+
+header img{
+    height:100px;
+    width: 300px;
+}
+header p{
+    color: aqua;
+}
+
+header {
+    display:flex;
+    
+}
