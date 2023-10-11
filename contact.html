@@ -1,103 +1,144 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
+
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <title>Contact</title>
+
+       <link rel="Stylesheet" href="assets/css/styles.css">
 
 </head>
+<!--!!!LES "<BR>" son mis pour faire l'espacement entre chaque "ligne" car aucune idée de comment faire autrement !!!-->
 <body>
- <header><img src="assets/img/jarditou_logo.jpg" alt="jarditou_logo">
-    <p>La qualité depuis 70 ans</p>  
-    </header> 
-<nav>
-    <ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="tableau.html">Tableau</a></li>
-    <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-<header><img src="assets/img/promotion.jpg" alt="promotion">
-</header>
-<h1>Contact</h1> 
-<p>*Ces zones sont obligatoires</p>
-<form>
-        <legend>Vos coordonnées</legend>
 
-        <div>
-            <label>votre nom* :</label>
-         <input type="text"  name="nom" id="nom">       
-        </div>
+    <Header>
 
-        <div>
-            <label>votre prénom* :</label>
-         <input type="text"  name="nom" id="nom">       
-        </div>
-        <div>
-            <p>Veuillez choisir votre sexe</p>
-            <label>Féminin</label>
-            <input type="radio" name="sexe">
-            <label>Masculin</label>
-            <input type="radio" name="sexe">
-            <label>Autres</label>
-            <input type="radio" name="sexe">
-        </div>
-        <div>
-                <label>Date de naissance* :</label>
-                <input type="date"  name="ddn" id="date">     
-            </div>
-            <div>
-                <label>Code postal* :</label>
-                <input type="text"  name="postalcode">     
-            </div>
-            <div>
-                <label>Adresse* :</label>
-                <input type="text"  name="adr">     
-            </div>
-            <div>
-                <label>Ville* :</label>
-                <input type="text"  name="ville">     
-            </div>
-            <div>
-                <label>Email* :</label>
-                <input type="email"  name="email" id="email">     
-            </div>
-    <legend>Votre demande</legend>
-    <p>Sujet* :</p>
-        <div>
-         <select>
-            <option hidden disabled selected>Veuillez selctionner un sujet</option>
-            <option>image 7</option>
-            <option>image 8</option>
-            <option>image 11</option>
-            <option>image 12</option>
-            <option>image 13</option>
-         </select>   
-        </div>
+    <img src="assets/img/jarditou_logo.jpg" width="350" height="100" alt="Logo Jarditou">
 
-        <div>
-        <label for="question">Votre question</label>   
-        <textarea name="commentaire" id="commentaire">         
-        
-        </textarea>
-        </div>
+
+    </Header>
     
-        <div>
-            <label>J'accepte le traitement informatique de ce formulaire</label>
-        <input type="checkbox" name="verif">
-    </div>
-       
-        </div>
-        <button type="submit">Envoyer</button>
-        <button type="submit">Annuler</button>
-   <nav>
-    <ul>
-    <li><a href="index.html">Mention léglaes</a></li>
-    <li><a href="tableau.html">Horaires</a></li>
-    <li><a href="contact.html">Plan du site</a></li>
-    </ul>
-</nav>
-   </form>  
+
+    <nav>
+
+        <ul>
+
+            <li><a href="index.html" title="Accueil">Accueil</a><br></li>
+             <li><a href="tableau.html" title="Tableau">Tableau</a><br></li>
+              <li><a href="contact.html" title="Contact">Contact</a><br></li>
+        
+        </ul>
+
+        <img id="promotion" src="assets/img/promotion.jpg" alt="Promotion">
+
+    </nav>
+
+
+
+    <main>
+            
+
+    <hr>
+
+        <!--1er Formulaire-->
+<p> * Ces zones sont obligatoires </p>
+
+<form action="http://bienvu.net/script.php" method="get" enctype="multipart/form-data">
+    
+        <fieldset>
+
+            <legend>Vos Coordonnées</legend>
+
+            <br>
+
+              <label for="Nom">Votre Nom*: </label><input type="text"  pattern="^[A-z]+$" required title="Nom" name="Nom" id="Nom"><br>
+
+            <br>
+
+                <label for="Prénom">Votre Prénom*: </label><input type="text" placeholder="Entrez votre Prénom" pattern="^[A-z]+$" required title="Prénom" name="Prénom" id="Prénom"><br>
+
+            <br>
+
+                   <label for="Sexe">Sexe:</label>
+                    <input type="radio" name="Sexe" value="Féminin" id="Sexe">Féminin
+                    <label for="Sexe"></label>
+                    <input type="radio" name="Sexe" value="Homme" id="Sexe">Masculin
+                    <label for="Sexe"></label>
+                    <input type="radio" name="Sexe" value="Mw" id="Cod">Skyrroz
+                    <br>
+
+            <br>
+
+                      <label for="date">Date de Naissance*: </label><input required title="ddn" type="date" name="ddn" id="date"><br>
+            <br>
+                        <label for="CodePostal">Code Postal*: </label><input type="number" placeholder="Entrez votre code postal" required title="Entrez votre code postal" name="CodePostal" id="CodePostal"><br>
+            <br>
+                          <label for="Adresse">Adresse: </label><input type="text" name="Adresse" id="Adresse"><br>
+            <br>
+                            <label for="Ville">Ville: </label><input type="text" name="Ville" id="Ville"><br>
+            <br>
+                              <label for="Email">Email*: </label> <input type="email" placeholder="Entrez votre Email" required title="Entrez votre Email" name="Email" id="Email"><br>
+            
+                               </fieldset><br>
+            
+            <!--2ème Formulaire-->
+
+            <fieldset>
+            
+            <legend>Votre demande</legend>
+            <br>
+
+            <label for="Votredemande">Sujet*: </label>
+    
+             <select id="Votredemande" required title="Veuillez selectionner un sujet" >
+
+              <option value="#">Veuillez selectionner un sujet</option>
+               <option value="Second">Mes commandes</option>
+                <option value="Third">Question sur un produit</option>
+                 <option value="Fourth">Réclamation</option>
+                  <option value="fifth">Autres</option>
+        
+            </select>
+            
+            <br>
+            <br>
+
+            <label for="Votrequestion">Votre question* :</label> <textarea name="Votrequestion" cols="20" rows="1" id="Votrequestion"></textarea><br>
+            
+            
+            </fieldset> <br>
+
+            
+            <input type="checkbox"> J'accepte le traitement informatique de ce formulaire
+
+            <br>
+            <br>
+
+            <input type="submit" value="Envoyer">
+             <input type="reset"  value="Annuler">
+            </form>
+</main>
+
+
+    
+
+    <!--Lien Mentions légales et autres-->
+
+    <footer>
+        
+        <ul>
+            
+        <li> <a href="#" title="Mention légales">Mentions légales</a> <br> </li>
+         <li> <a href="#" title="Horaires">Horaires</a> <br> </li>
+          <li> <a href="#" title="PlanDuSite"> Plan du site </a> <br> </li>
+
+        </ul>
+
+    </footer>
+
 </body>
+
 </html>
